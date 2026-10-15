@@ -10,7 +10,7 @@ $\Delta t = t_{raw} - t_{true} \propto \frac{1}{A}$
 
 Since the amplitude fluctuates between events the time-walk effect causes a spread of the time measured and worsens the time resoultion $\sigma_t$. This is more significant for small pulses since the rising edge reaches the threshold more slowly and is more sensitive to noise. There is also other factors affecting the shape of the pulse such as particle position and the angle of incidence that could result in charge sharing between pixels and a tilted path respectively.
 
-ALICE3 has a target of a single-hit resolution of 20 ps and the current MasPix prototype that this project is based on reaches about 75 ps. A hardware Constant Fraction Discriminator (CFD) is used as a correction to remove most of the amplitude dependence by triggering at a fixed fraction of the pulse height. However, this is a single variable method of correction and it does not take into account the position inside the pixel, charge sharing or incidence angle. 
+ALICE3 has a target of a single-hit resolution of 20 ps [1] and the current MadPix prototype [2] that this project is based on reaches about 75 ps. A hardware Constant Fraction Discriminator (CFD) is used as a correction to remove most of the amplitude dependence by triggering at a fixed fraction of the pulse height. However, this is a single variable method of correction and it does not take into account the position inside the pixel, charge sharing or incidence angle. 
 
 The remanining time-walk depends on several correlated variables non-linearly. A gradient boosted tree model can learn the dependence on these variables and improve on the CFD correction. Therefore, the goal of this project is to implement this and investigate the further improvements this method can provide.
 
@@ -62,3 +62,10 @@ For JupyterLab:
 ```bash
 docker run -p 8888:8888 -v $(pwd):/project timewalk
 ```
+
+## References
+[1] ALICE Collaboration, "Letter of intent for ALICE 3: A next-generation heavy-ion experiment
+   at the LHC", arXiv:2211.02491 [physics.ins-det] (2022). https://arxiv.org/abs/2211.02491
+
+[2] U. Follo, "Development of CMOS LGAD sensors for the ALICE 3 Time of Flight detector",
+   arXiv:2601.02823 [physics.ins-det] (2026). https://arxiv.org/abs/2601.02823
