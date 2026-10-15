@@ -1,0 +1,7 @@
+data/
+output/
+simulation/data/
+*.root
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
